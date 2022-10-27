@@ -6,7 +6,7 @@ utf8_general_ci;
 USE mysticbraids;
 
 CREATE TABLE users(
-id INT PRIMARY KEY AUTO_INCREMENT,
+uid INT PRIMARY KEY AUTO_INCREMENT,
  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
  name VARCHAR(255) NOT NULL,
  email VARCHAR(255) NOT NULL,
@@ -47,7 +47,7 @@ id INT PRIMARY KEY AUTO_INCREMENT,
      );
       
       CREATE TABLE articles (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    aid INT PRIMARY KEY AUTO_INCREMENT,
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     author INT NOT NULL,
     title VARCHAR(255) NOT NULL,
@@ -57,7 +57,7 @@ id INT PRIMARY KEY AUTO_INCREMENT,
     status ENUM('online', 'offline', 'deleted') DEFAULT 'online',
     views INT DEFAULT 0,
 
-    FOREIGN KEY (author) REFERENCES users (id)
+    FOREIGN KEY (author) REFERENCES users (uid)
       );
 
       INSERT INTO articles (
@@ -83,9 +83,37 @@ id INT PRIMARY KEY AUTO_INCREMENT,
         'Como torna seu penteado formal',
         'online'
 
-      )
+      );
 
-
-
-
-
+      CREATE TABLE comments (
+    cid INT PRIMARY KEY AUTO_INCREMENT,
+    cdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    cauthor INT NOT NULL,
+    article INT NOT NULL,
+    comment TEXT NOT NULL,
+    cstatus ENUM('online', 'offline', 'deleted') DEFAULT 'online',
+    FOREIGN KEY (cauthor) REFERENCES users (uid),
+    FOREIGN KEY (article) REFERENCES articles (aid)
+);
+ INSERT INTO comments (
+	cauthor,
+	comment,
+	article
+) VALUES(
+     '1',
+	'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia provident reiciendis earum, tenetur reprehenderit iure ipsum.',
+'2'
+),(
+'2',
+'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia provident reiciendis earum, tenetur reprehenderit iure ipsum.',
+'1'
+ );
+  CREATE TABLE contacts (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    message TEXT NOt NULL,
+    status ENUM('sended', 'readed', 'responded', 'deleted') DEFAULT 'sended'
+);
