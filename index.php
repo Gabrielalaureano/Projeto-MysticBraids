@@ -1,15 +1,10 @@
 <?php
     require_once 'head.php';
     require_once 'menu.php';
-
-  <body>
-
-  
+?>
+    
 
 
-
-
-
-  <?php 
+ <?php
   require_once 'footer.php';
-    ?>
+?>
