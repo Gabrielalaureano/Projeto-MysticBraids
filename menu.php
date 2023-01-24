@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Mystic Braids</a>
+        <img src="imagens/logotipo.png" alt="...">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,8 +17,8 @@
               </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="trancas.php">tranças</a>
-                    <a class="dropdown-item" href="#">nagôs</a>
-                    <a class="dropdown-item" href="#">Penteados</a>
+                    <a class="dropdown-item" href="nagôs.php">nagôs</a>
+                    <a class="dropdown-item" href="penteados.php">Penteados</a>
                 
               </div>
             </li>

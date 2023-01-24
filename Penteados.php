@@ -4,7 +4,7 @@
   ?>
 <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-10 text-center">
                 <h2>Penteados</h2>
             </div>
         </div>
@@ -12,7 +12,7 @@
 
     <div class="container-fluid imagens">
         <div class="row">
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
                     <div class="card" style="width: 16rem;">
                         <img class="card-img-top" src="imagens/tranças.jpg" >
                         <div class="card-body">
@@ -28,7 +28,7 @@
                  </div>
             </div>
 
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
                 <div class="card" style="width: 16rem;">
                     <img class="card-img-top" src="imagens/tranças02.jpg" >
                     <div class="card-body">
@@ -44,7 +44,7 @@
 
 
 
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
                 <div class="card" style="width: 16rem;">
                     <img class="card-img-top" src="imagens/tranças03.jpg" >
                         <div class="card-body">
